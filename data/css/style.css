@@ -1,0 +1,249 @@
+/* ==========================================================================
+   BlueSolarPanel
+   Copyright (c) 2026 Björn Eriksson
+   Licensed under the MIT License
+   ========================================================================== */
+   
+
+/* ==========================================================================
+   Base Styles & Layout
+   ========================================================================== */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+}
+
+html {
+    /* Forces vertical scrollbar to prevent layout shift when content changes */
+    overflow-y: scroll;
+}
+
+/* Header & Logo Links */
+.logo-link {
+    color: inherit;              /* Inherits color from parent heading instead of default blue */
+    text-decoration: underline;  /* Keeps the underline style */
+    cursor: pointer;             /* Displays a pointer hand icon on hover */
+    text-underline-offset: 4px;  /* Pushes the underline slightly down from the text */
+    text-decoration-thickness: 3px; /* Defines the thickness of the underline */
+}
+
+/* ==========================================================================
+   Page Sections (Layout Containers)
+   ========================================================================== */
+
+/* Top Header / Branding Section */
+.top-section {
+    width: 80%;
+    margin: 20px auto;           /* Centers the container horizontally */
+    text-align: center;          /* Centers the image inside the container */
+}
+
+.top-section img {
+    max-width: 100%;             /* Ensures responsiveness on smaller screens */
+    height: auto;
+    display: inline-block;
+}
+
+/* Main Content Area */
+.middle-section {
+    width: 60%;
+    margin: 40px auto;           /* Centers the container horizontally */
+    text-align: left;            /* Left-aligns text for better readability */
+    font-size: 1.15rem;          /* Slightly larger body text */
+}
+
+/* Footer / Bottom Area */
+.bottom-section {
+    width: 80%;
+    margin: 40px auto;           /* Centers the container horizontally */
+    text-align: center;          /* Centers text inside the footer */
+    font-size: 1rem;             /* Standard text size */
+    border-top: 1px solid #ddd;  /* Decorative divider line */
+    padding-top: 20px;
+}
+
+/* ==========================================================================
+   Buttons & Interactive Elements
+   ========================================================================== */
+
+/* Main Action Button (Modern Windows Blue Style) */
+.btn-match {
+    display: inline-block;
+    padding: 10px 24px;
+    margin-top: 15px;
+    background-color: #0078d4;   /* Modern Windows blue corporate color */
+    color: #ffffff;              /* White text contrast */
+    text-decoration: none;       /* Removes default link underline */
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 4px;          /* Softly rounded corners */
+    transition: background-color 0.2s ease, transform 0.1s ease; /* Smooth hover state transitions */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle depth shadow */
+}
+
+.btn-match:hover {
+    background-color: #005a9e;   /* Darker blue on hover */
+    cursor: pointer;
+}
+
+.btn-match:active {
+    transform: scale(0.98);      /* Button "press-down" effect */
+}
+
+/* ==========================================================================
+   Green Button Modifiers (For Saved/Ignored Lists)
+   ========================================================================== */
+
+.btn-green {
+    background-color: #2e7d32 !important; /* Forest green shade */
+}
+
+.btn-green:hover {
+    background-color: #1b5e20 !important; /* Darker green on hover state */
+}
+
+/* ==========================================================================
+   BLE Device List Components
+   ========================================================================== */
+
+.device-list {
+    margin: 20px 0 40px 0;
+    padding: 0;
+    list-style: none;            /* Removes default bullet points */
+}
+
+.device-item {
+    display: flex;
+    justify-content: space-between; /* Pushes text to the left and buttons to the right */
+    align-items: center;         /* Vertically aligns content inside the row */
+    padding: 12px 15px;
+    margin-bottom: 8px;
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+}
+
+.device-info {
+    display: flex;
+    flex-direction: column;      /* Stacks device name on top of the MAC address */
+}
+
+.device-name {
+    font-weight: bold;
+}
+
+.device-mac {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.device-actions {
+    display: flex;
+    gap: 10px;                   /* Creates spacing between control buttons */
+}
+
+/* Icon / Action Buttons inside the device list */
+.action-btn {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 4px;
+    transition: background 0.2s;
+    text-decoration: none;
+}
+
+.action-btn:hover {
+    background-color: #eaeaea;   /* Gives a clean background feedback on hover */
+}
+
+/* Decorative Sections */
+.section-divider {
+    border-top: 2px dashed #ddd; /* Clean separation line between modules */
+    margin: 30px 0 20px 0;
+}
+
+/* Diagnostics / Testing Interface Box */
+.test-box {
+    background-color: #f0f4f8;   /* Subtle blue tint for secondary/test sections */
+    border: 1px solid #b6d4fe;
+    padding: 15px;
+    border-radius: 6px;
+    margin-top: 10px;
+}
+
+/* ==========================================================================
+   Forms & Feedback Alerts
+   ========================================================================== */
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 0.95rem;
+}
+
+.form-control {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;      /* Includes padding and border in the element's total width */
+}
+
+/* Success Notification Message Box */
+.alert-success {
+    background-color: #d1e7dd;   /* Soft open-source green background */
+    color: #0f5132;              /* High-contrast dark green text */
+    padding: 12px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+/* ==========================================================================
+   Transparent Full-screen Loading / Wait Overlay
+   ========================================================================== */
+
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 120, 212, 0.7); /* 70% semi-transparent Windows blue */
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(4px);                 /* Subtly blurs the underlying page content */
+    animation: pulseTransparentBackground 3s ease-in-out infinite;
+}
+
+.loading-text {
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 3.5rem;                          /* Enlarged font size for clear visibility */
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle text drop-shadow for contrast */
+}
+
+/* Animation loop softly altering the opacity of the transparent blue overlay */
+@keyframes pulseTransparentBackground {
+    0% { background-color: rgba(0, 120, 212, 0.65); }
+    50% { background-color: rgba(0, 90, 158, 0.85); } /* Slightly deeper and more opaque blue */
+    100% { background-color: rgba(0, 120, 212, 0.65); }
+}

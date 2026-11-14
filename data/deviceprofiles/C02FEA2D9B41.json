@@ -1,0 +1,17 @@
+{
+    "mac_address": "C0:2F:EA:2D:9B:41",
+    "category": "solar_charger",
+    "driver": "victron_smartsolar",
+    "vendor_name": "Victron Energy",
+    "scanned_name": "SmartSolar HQ2536P4M4M",
+    "internal_name": "Unknown",
+    "custom_name": "",
+    "notes": "",
+    "identified_at": "2026-11-14 02:06:44",
+    "status": "active",
+    "commands": {
+        "Live Data Channel": "97580002-ddf1-48be-b73e-182664615d8e",
+        "Write Control": "97580004-ddf1-48be-b73e-182664615d8e",
+        "Device Settings": "97580006-ddf1-48be-b73e-182664615d8e"
+    }
+}

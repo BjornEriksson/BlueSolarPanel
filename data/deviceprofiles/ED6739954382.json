@@ -1,0 +1,13 @@
+{
+    "mac_address": "ED:67:39:95:43:82",
+    "category": "unknown",
+    "driver": "standard_ble",
+    "vendor_name": "Unknown Brand",
+    "scanned_name": "A1-4XXXXXXXXXXX",
+    "internal_name": "Unknown",
+    "custom_name": "",
+    "notes": "",
+    "identified_at": "2026-11-14 02:06:47",
+    "status": "active",
+    "commands": []
+}

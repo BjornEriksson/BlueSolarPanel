@@ -1,0 +1,17 @@
+{
+    "mac_address": "FF:6B:BD:A9:86:C6",
+    "category": "solar_charger",
+    "driver": "victron_smartsolar",
+    "vendor_name": "Victron Energy",
+    "scanned_name": "SmartSolar HQ2533TZRUM",
+    "internal_name": "Unknown",
+    "custom_name": "",
+    "notes": "",
+    "identified_at": "2026-11-14 02:06:53",
+    "status": "active",
+    "commands": {
+        "Live Data Channel": "97580002-ddf1-48be-b73e-182664615d8e",
+        "Write Control": "97580004-ddf1-48be-b73e-182664615d8e",
+        "Device Settings": "97580006-ddf1-48be-b73e-182664615d8e"
+    }
+}

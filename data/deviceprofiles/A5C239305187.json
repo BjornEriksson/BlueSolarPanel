@@ -1,0 +1,17 @@
+{
+    "mac_address": "A5:C2:39:30:51:87",
+    "category": "battery",
+    "driver": "daly_bms",
+    "vendor_name": "Daly Smart BMS",
+    "scanned_name": "DP04S007L4S100A",
+    "internal_name": "Unknown",
+    "custom_name": "",
+    "notes": "",
+    "identified_at": "2026-11-14 02:06:50",
+    "status": "active",
+    "commands": {
+        "Main Status": "DDA50300FFFD77",
+        "Cell Voltages": "DDA50400FFFC77",
+        "Hardware Info": "DDA50500FFFB77"
+    }
+}
